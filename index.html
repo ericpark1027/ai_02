@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalypse Girl | Landing Page Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Pretendard', 'Inter', 'sans-serif'] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { transition: background-color 0.3s, color 0.3s; }
+        .lang-en { display: none; }
+        html[lang="en"] .lang-ko { display: none; }
+        html[lang="en"] .lang-en { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans antialiased">
 
+    <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl border-b border-slate-200 dark:border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-bold text-lg tracking-tighter">
+                APOCALYPSE <span class="text-blue-600">GIRL</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLang()" class="text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-300 dark:border-zinc-700 hover:bg-white dark:hover:bg-zinc-800 transition-all">
+                    <span class="lang-ko">ENGLISH</span>
+                    <span class="lang-en">한국어</span>
+                </button>
+                <button onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-300 dark:border-zinc-700 hover:bg-white dark:hover:bg-zinc-800 transition-all">
+                    <svg id="sun-icon" class="w-4 h-4 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                    <svg id="moon-icon" class="w-4 h-4 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 max-w-4xl mx-auto px-6">
+        <section class="mb-20 text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">
+                <span class="lang-ko">랜딩 페이지 제작 마스터 클래스</span>
+                <span class="lang-en">Landing Page Masterclass</span>
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-zinc-400 mb-10 leading-relaxed">
+                <span class="lang-ko">복잡한 코드 없이도 감각적인 결과물을 만드는 법을 단계별로 안내합니다.</span>
+                <span class="lang-en">A step-by-step guide to creating sensible results without complex code.</span>
+            </p>
+
+            <div class="relative group rounded-2xl overflow-hidden shadow-2xl bg-black border border-slate-200 dark:border-zinc-800">
+                <video class="w-full aspect-video object-cover" controls autoplay muted loop>
+                    <source src="https://raw.githubusercontent.com/ericpark1027/ai_02/main/assets/Final.mp4" type="video/mp4">
+                </video>
+                <div class="absolute top-4 left-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded text-xs text-white font-medium">
+                    Feature Video: Apocalypse Girl
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-12">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">Step 01</span>
+                    <h2 class="text-2xl font-bold">
+                        <span class="lang-ko">자산 준비 및 링크 변환</span>
+                        <span class="lang-en">Asset Prep & Link Conversion</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-zinc-400 leading-relaxed">
+                        <span class="lang-ko">GitHub에 올린 영상은 일반 링크로 바로 재생되지 않습니다. <code>blob</code>을 <code>raw</code> 주소로 변환하여 브라우저가 직접 파일을 읽을 수 있게 해야 합니다.</span>
+                        <span class="lang-en">Videos uploaded to GitHub won't play via standard links. You must convert <code>blob</code> to <code>raw</code> so the browser can read the file directly.</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-slate-200 dark:border-zinc-800 shadow-sm">
+                    <h3 class="font-bold mb-3 text-sm opacity-50 uppercase tracking-tighter">Pro Tip</h3>
+                    <p class="text-sm italic">
+                        <span class="lang-ko">"영상 파일명에 공백이 있다면 '%20'으로 자동 변환되니 주의하세요!"</span>
+                        <span class="lang-en">"Be careful, spaces in filenames are automatically converted to '%20'!"</span>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-slate-200 dark:border-zinc-800">
+
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">Step 02</span>
+                    <h2 class="text-2xl font-bold">
+                        <span class="lang-ko">다크 모드와 UI 조화</span>
+                        <span class="lang-en">Dark Mode & UI Harmony</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-zinc-400 leading-relaxed">
+                        <span class="lang-ko">최근 웹 트렌드는 다크 모드 지원이 필수입니다. Tailwind의 <code>dark:</code> 접두사를 사용하면 배경색과 텍스트 대비를 손쉽게 조절할 수 있습니다.</span>
+                        <span class="lang-en">Supporting dark mode is essential in modern web trends. Using Tailwind's <code>dark:</code> prefix makes it easy to adjust contrast.</span>
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">Step 03</span>
+                    <h2 class="text-2xl font-bold">
+                        <span class="lang-ko">GitHub Pages 배포</span>
+                        <span class="lang-en">GitHub Pages Deployment</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-zinc-400 leading-relaxed">
+                        <span class="lang-ko">Settings > Pages 메뉴에서 브랜치를 'main'으로 설정하세요. 수 분 내로 전 세계 어디서나 접속 가능한 당신만의 페이지가 완성됩니다.</span>
+                        <span class="lang-en">Set the branch to 'main' in Settings > Pages. In minutes, your page will be accessible globally.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-zinc-800 py-10 text-center text-xs text-slate-400 uppercase tracking-widest">
+        &copy; 2026 Apocalypse Girl Project &bull; Published via GitHub Pages
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+        function toggleLang() {
+            const html = document.documentElement;
+            html.getAttribute('lang') === 'ko' ? html.setAttribute('lang', 'en') : html.setAttribute('lang', 'ko');
+        }
+    </script>
+</body>
+</html>
